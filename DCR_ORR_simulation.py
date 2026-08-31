@@ -274,7 +274,7 @@ for name, (is_orr, pr, hr) in settings.items():
             d = pd.DataFrame(out)
 
             true_diff = d["true_rate_exp"].mean() - d["true_rate_ctrl"].mean()
-            sig = (d["p"] < alpha).astype(float)
+            sig = ((d["p"] < alpha) & (d["diff"] > 0)).astype(float)
             cov = ((d["lo"] <= true_diff) & (true_diff <= d["hi"])).astype(float)
 
             # endpoint-level sensitivity and specificity
