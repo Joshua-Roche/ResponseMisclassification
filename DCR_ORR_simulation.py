@@ -223,9 +223,6 @@ print(f"ORR   responder probability   {p_resp_orr[0]:.3f} control, "
 print(f"DCR   landmark                scan {dcr_landmark_scan} (month {t_landmark})")
 print(f"DCR   control rate at the landmark     {dcr_control:.3f}")
 print(f"DCR   progression HR needed for +{dcr_effect:.2f}   {hr_dcr:.3f}")
-print("      (note the chapter quotes a 60% DCR baseline, which needs a landmark")
-print("       around month 4 - with 3-monthly scans you get 69% at one scan and")
-print(f"       {dcr_control:.0%} at two, so the grid doesn't land on it)\n")
 
 
 def sample_size(p1, p2):
